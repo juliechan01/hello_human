@@ -14,9 +14,9 @@ public class HumanController {
 		return "Hello human";
 	}
 	
-	// INPUT ENTERED
-	@RequestMapping("/{searchQuery}")
-	public String enter(@PathVariable String searchQuery) {
-		return "Hello " + searchQuery + "!";
+	// INPUT ENTERED, FIRST & LAST
+	@RequestMapping("/{first}/{last}")
+	public String enter(@PathVariable("first") String first, @PathVariable("last") String last) {
+		return "Hello " + first + " " + last + "!";
 	}
 }
